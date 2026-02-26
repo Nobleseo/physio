@@ -1,183 +1,123 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Specialist Home Physiotherapy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-800 font-sans">
 
-export default function HomePhysioLanding() {
-  return (
-    <div className="min-h-screen bg-white text-slate-800">
+<!-- STICKY CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-slate-900 text-white py-3 px-6 flex justify-between items-center z-50">
+  <span class="text-sm">Free 20-Minute Clinical Consultation</span>
+  <a href="#contact" class="bg-white text-slate-900 px-5 py-2 rounded-xl text-sm font-semibold">Book Now</a>
+</div>
 
-      {/* TOP TRUST BAR */}
-      <div className="bg-slate-900 text-white text-sm py-3 text-center">
-        Specialist Neurological & Home Physiotherapy • Same Therapist Continuity • Evidence‑Based Care
-      </div>
+<!-- TOP TRUST BAR -->
+<div class="bg-slate-900 text-white text-sm py-3 text-center">
+  MSc Neuro Physiotherapy • 12+ Years Experience • Serving Greater London
+</div>
 
-      {/* HERO */}
-      <section className="py-24 px-6 bg-gradient-to-br from-slate-50 to-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl font-bold leading-tight mb-6"
-            >
-              Specialist Home Physiotherapy That Restores Independence — Not Just Mobility.
-            </motion.h1>
-
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              For stroke, Parkinson’s, MS and long‑term mobility conditions. Structured, progressive rehabilitation delivered at home — with measurable outcomes and true clinical continuity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button className="rounded-2xl px-8 py-4 text-lg shadow-lg">
-                Book Your Free 20‑Minute Clinical Call
-              </Button>
-              <Button variant="outline" className="rounded-2xl px-8 py-4 text-lg">
-                View Patient Results
-              </Button>
-            </div>
-
-            <p className="text-sm text-slate-500">
-              No obligation. Speak directly with a specialist clinician.
-            </p>
-          </div>
-
-          <div className="bg-slate-100 rounded-3xl h-[420px] flex items-center justify-center shadow-inner">
-            <p className="text-slate-500">Professional In‑Home Treatment Image</p>
-          </div>
-        </div>
-      </section>
-
-      {/* PROBLEM SECTION */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold mb-6">
-            Why Standard Physiotherapy Often Falls Short
-          </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Short appointments. Generic programmes. Long gaps between sessions. For complex neurological and long‑term mobility conditions, fragmented care leads to stalled progress and preventable decline.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto mt-14">
-          {[
-            "Fragmented short‑term care",
-            "Low exercise progression",
-            "Travel & waiting list delays",
-            "Lack of specialist continuity",
-          ].map((item, index) => (
-            <Card key={index} className="rounded-2xl shadow-md">
-              <CardContent className="p-8 text-center">
-                <p className="text-slate-700 font-medium">{item}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* AUTHORITY / APPROACH */}
-      <section className="py-24 px-6 bg-slate-50">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-semibold mb-6">
-              A Structured, Measurable Rehabilitation Model
-            </h2>
-            <ul className="space-y-4 text-lg text-slate-700">
-              <li>• Home‑first specialist treatment tailored to daily function</li>
-              <li>• Long‑term progressive plans with objective outcome measures</li>
-              <li>• Higher‑intensity coaching between visits</li>
-              <li>• Same therapist continuity and monthly performance reviews</li>
-            </ul>
-            <div className="mt-8">
-              <Button className="rounded-2xl px-8 py-4 text-lg">
-                Speak to a Specialist
-              </Button>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-3xl p-10 shadow-xl">
-            <h3 className="text-xl font-semibold mb-6">Measured Outcomes Focus On:</h3>
-            <ul className="space-y-3 text-slate-600">
-              <li>• Walking distance & gait quality</li>
-              <li>• Balance confidence & fall reduction</li>
-              <li>• Pain frequency & flare‑up control</li>
-              <li>• Daily task independence</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-semibold mb-4">Clear Pathway to Recovery</h2>
-          <p className="text-lg text-slate-600">
-            From first conversation to sustained independence.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {[
-            "Free Clinical Phone Assessment",
-            "Comprehensive In‑Home Evaluation",
-            "Tailored Specialist Treatment",
-            "Guided Home Exercise Programme",
-            "Monthly Objective Review",
-          ].map((step, index) => (
-            <Card key={index} className="rounded-2xl shadow-sm">
-              <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold mb-3 text-slate-900">
-                  {index + 1}
-                </div>
-                <p className="text-slate-600">{step}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-24 px-6 bg-slate-50">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-semibold mb-4">What Patients & Families Say</h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[1,2,3].map((item) => (
-            <Card key={item} className="rounded-2xl shadow-lg">
-              <CardContent className="p-8">
-                <p className="text-slate-600 mb-6">
-                  “We saw measurable improvement within weeks. The consistency and expertise made all the difference.”
-                </p>
-                <p className="font-semibold text-slate-800">Patient Family</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="py-24 px-6 bg-slate-900 text-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Start Structured, Specialist Rehabilitation?
-          </h2>
-          <p className="text-lg text-slate-300 mb-10">
-            Book your free clinical call and find out what measurable progress could look like for you or your family member.
-          </p>
-          <Button className="rounded-2xl px-10 py-5 text-lg bg-white text-slate-900 hover:bg-slate-200">
-            Book Your Free 20‑Minute Call
-          </Button>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-black text-slate-400 py-8 text-center text-sm">
-        © 2026 Specialist Home Physiotherapy Service. All rights reserved.
-      </footer>
-
+<!-- HERO WITH FORM -->
+<section class="py-24 px-6 bg-gradient-to-br from-slate-50 to-white">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <h1 class="text-5xl font-bold leading-tight mb-6">
+        Regain Strength, Stability & Independence — With Specialist Home Physiotherapy
+      </h1>
+      <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+        Advanced neurological rehabilitation for stroke, Parkinson’s, MS and mobility decline. Delivered at home with structured progression and measurable results.
+      </p>
+      <ul class="space-y-2 text-slate-700 mb-8">
+        <li>✔ Same specialist therapist every visit</li>
+        <li>✔ Measurable mobility improvements</li>
+        <li>✔ No clinic travel or waiting lists</li>
+      </ul>
     </div>
-  );
-}
+
+    <div class="bg-white rounded-3xl shadow-2xl p-8">
+      <h3 class="text-xl font-semibold mb-6">Request Your Free Clinical Call</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Full Name" class="w-full border border-slate-300 rounded-xl px-4 py-3" required />
+        <input type="email" placeholder="Email Address" class="w-full border border-slate-300 rounded-xl px-4 py-3" required />
+        <input type="tel" placeholder="Phone Number" class="w-full border border-slate-300 rounded-xl px-4 py-3" required />
+        <button class="w-full bg-slate-900 text-white rounded-xl py-3 font-semibold">Book My Free Call</button>
+      </form>
+      <p class="text-xs text-slate-500 mt-4">No obligation. Confidential consultation with a specialist clinician.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="py-16 px-6 bg-white text-center">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+    <div>
+      <h4 class="font-semibold text-lg">Neurological Specialist</h4>
+      <p class="text-slate-600">Advanced training in stroke & Parkinson’s rehabilitation</p>
+    </div>
+    <div>
+      <h4 class="font-semibold text-lg">Outcome Focused</h4>
+      <p class="text-slate-600">Walking distance, balance scores & functional independence tracked monthly</p>
+    </div>
+    <div>
+      <h4 class="font-semibold text-lg">Local & Trusted</h4>
+      <p class="text-slate-600">Providing home physiotherapy across Greater London</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITY IMAGE SECTION -->
+<section class="py-24 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <div class="rounded-3xl overflow-hidden shadow-xl">
+      <img src="authority-image.jpg" alt="Therapist guiding balance training" class="w-full h-full object-cover" />
+    </div>
+    <div>
+      <h2 class="text-3xl font-semibold mb-6">A Structured, Measurable Rehabilitation Model</h2>
+      <ul class="space-y-4 text-lg text-slate-700">
+        <li>• Progressive long-term rehabilitation plans</li>
+        <li>• Higher-intensity guided sessions</li>
+        <li>• Monthly objective performance reviews</li>
+        <li>• Family & carer coaching built in</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-24 px-6 bg-white text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-12">Real Patient Outcomes</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-slate-50 p-8 rounded-2xl shadow-md">
+        <p class="text-slate-600 mb-6">“Walking distance improved by 40% in 10 weeks. The consistency changed everything.”</p>
+        <p class="font-semibold">Stroke Patient, 68</p>
+      </div>
+      <div class="bg-slate-50 p-8 rounded-2xl shadow-md">
+        <p class="text-slate-600 mb-6">“Falls reduced significantly and balance confidence returned.”</p>
+        <p class="font-semibold">Parkinson’s Client, 72</p>
+      </div>
+      <div class="bg-slate-50 p-8 rounded-2xl shadow-md">
+        <p class="text-slate-600 mb-6">“Professional, structured and genuinely outcome-driven.”</p>
+        <p class="font-semibold">Family Member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="contact" class="py-24 px-6 bg-slate-900 text-white text-center">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">Start Specialist Home Rehabilitation Today</h2>
+    <p class="text-lg text-slate-300 mb-10">Limited weekly availability. Secure your free consultation now.</p>
+    <a href="#" class="bg-white text-slate-900 rounded-2xl px-10 py-5 text-lg inline-block font-semibold">Book Your Free Call</a>
+  </div>
+</section>
+
+<footer class="bg-black text-slate-400 py-8 text-center text-sm">
+  © 2026 Specialist Home Physiotherapy Service • Privacy Policy • Terms
+</footer>
+
+</body>
+</html>
